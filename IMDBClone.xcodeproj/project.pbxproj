@@ -13,9 +13,11 @@
 		6C66758D25D5A1F1000D66B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C66758B25D5A1F1000D66B0 /* Main.storyboard */; };
 		6C66758F25D5A1F3000D66B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C66758E25D5A1F3000D66B0 /* Assets.xcassets */; };
 		6C66759225D5A1F3000D66B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C66759025D5A1F3000D66B0 /* LaunchScreen.storyboard */; };
+		AFB2B931ED1696260031F009 /* Pods_IMDBClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A72BAE80A13B08835E814B5 /* Pods_IMDBClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25F44270DCE936520BC2A4A2 /* Pods-IMDBClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBClone.release.xcconfig"; path = "Target Support Files/Pods-IMDBClone/Pods-IMDBClone.release.xcconfig"; sourceTree = "<group>"; };
 		6C66758225D5A1F1000D66B0 /* IMDBClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMDBClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C66758525D5A1F1000D66B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C66758725D5A1F1000D66B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		6C66758E25D5A1F3000D66B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C66759125D5A1F3000D66B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C66759325D5A1F3000D66B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A72BAE80A13B08835E814B5 /* Pods_IMDBClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4BE80629C2215FFCC94CE1 /* Pods-IMDBClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBClone.debug.xcconfig"; path = "Target Support Files/Pods-IMDBClone/Pods-IMDBClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB2B931ED1696260031F009 /* Pods_IMDBClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				6C66758425D5A1F1000D66B0 /* IMDBClone */,
 				6C66758325D5A1F1000D66B0 /* Products */,
+				731EE621D8954FA54F6E9BF5 /* Pods */,
+				7015F714C75DD4D75A2B9F66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = IMDBClone;
 			sourceTree = "<group>";
 		};
+		7015F714C75DD4D75A2B9F66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A72BAE80A13B08835E814B5 /* Pods_IMDBClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		731EE621D8954FA54F6E9BF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB4BE80629C2215FFCC94CE1 /* Pods-IMDBClone.debug.xcconfig */,
+				25F44270DCE936520BC2A4A2 /* Pods-IMDBClone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C66759625D5A1F3000D66B0 /* Build configuration list for PBXNativeTarget "IMDBClone" */;
 			buildPhases = (
+				A7579BF1D4A327E7D02C7449 /* [CP] Check Pods Manifest.lock */,
 				6C66757E25D5A1F1000D66B0 /* Sources */,
 				6C66757F25D5A1F1000D66B0 /* Frameworks */,
 				6C66758025D5A1F1000D66B0 /* Resources */,
@@ -131,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7579BF1D4A327E7D02C7449 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMDBClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C66757E25D5A1F1000D66B0 /* Sources */ = {
@@ -283,6 +334,7 @@
 		};
 		6C66759725D5A1F3000D66B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB4BE80629C2215FFCC94CE1 /* Pods-IMDBClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +353,7 @@
 		};
 		6C66759825D5A1F3000D66B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25F44270DCE936520BC2A4A2 /* Pods-IMDBClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
