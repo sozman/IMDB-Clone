@@ -16,8 +16,27 @@ class SearchPresenter: SearchPresenterInterface {
     var interactor: SearchInteractorInterface?
     /// Handles navigation between screens
     var router: SearchRouterInterface?
+    /// Search Response
+    var searchResponse: [SearchResponse]?
+    /// Fetch Search
+    /// - Parameter movieName: Movie Name
+    func fetchSearch(movieName: String) {
+        interactor?.getSearchResult(movieName: movieName)
+    }
 }
 
 /// This delegate which do throw response when api request has complated
 extension SearchPresenter: SearchInteractorDelegate {
+    /// Fetch Search
+    /// - Parameter response: Parsed JSON File via Search Response Model
+    func fetchSearch(response: SearchResponse?) {
+        // Control Response
+        if let data = response {
+            /// Dummy Array
+            var array = [SearchResponse]()
+            array.append(data)
+            self.searchResponse = array
+        }
+        view?.updateView()
+    }
 }

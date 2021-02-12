@@ -12,4 +12,11 @@ import Foundation
 class SearchInteractor: SearchInteractorInterface {
     /// Presenter Interactor Delegate
     weak var presenter: SearchInteractorDelegate?
+    /// Get Search Result
+    /// - Parameter movieName: Movie Name
+    func getSearchResult(movieName: String) {
+        WebService.searchMovie(movieName: movieName) { (response) in
+            self.presenter?.fetchSearch(response: response)
+        }
+    }
 }

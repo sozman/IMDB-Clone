@@ -104,6 +104,15 @@ class SearchViewController: UIViewController {
 // MARK: - View Interface
 /// Only responsible for presenting data in a way decided
 extension SearchViewController: SearchViewInterface {
+    /// Update View Trigger
+    func updateView() {
+        // Data Control
+        if let response = self.presenter?.searchResponse {
+            
+        } else {
+            print("Sonuc bulunamadi")
+        }
+    }
 }
 
 // MARK: - UITextfield Delegate

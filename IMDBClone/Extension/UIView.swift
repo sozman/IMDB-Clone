@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 extension UIView {
+    /// Cell Identifier name for table view cell
+    static var CellIdentifier: String {
+        return "\(self)"
+    }
     /// Custom Round Corners
     /// - Parameters:
     ///   - corners: corners

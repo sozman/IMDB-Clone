@@ -17,12 +17,19 @@ protocol SearchPresenterInterface: class {
     var interactor: SearchInteractorInterface? { get set }
     /// Handles navigation between screens
     var router: SearchRouterInterface? { get set }
+    /// Search Response
+    var searchResponse: [SearchResponse]? { get set }
+    /// Fetch Search
+    /// - Parameter movieName: Movie Name
+    func fetchSearch(movieName: String)
 }
 // MARK: - View Interface
 /// Only responsible for presenting data in a way decided
 protocol SearchViewInterface: class {
     /// Presenter Interface
     var presenter: SearchPresenterInterface? { get set }
+    /// Update View Trigger
+    func updateView()
 }
 // MARK: - Router Interface
 /// Listens from the about which screen to present and executes that.
@@ -38,8 +45,14 @@ protocol SearchRouterInterface: class {
 protocol SearchInteractorInterface: class {
     /// Presenter Interactor Delegate
     var presenter: SearchInteractorDelegate? { get set }
+    /// Get Search Result
+    /// - Parameter movieName: Movie Name
+    func getSearchResult(movieName: String)
 }
 // MARK: - Interactor Delegate
 /// A delegate which do throw response when api request has complated
 protocol SearchInteractorDelegate: class {
+    /// Fetch Search
+    /// - Parameter response: Parsed JSON File via Search Response Model
+    func fetchSearch(response: SearchResponse?)
 }
