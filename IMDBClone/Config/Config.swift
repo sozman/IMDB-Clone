@@ -38,7 +38,7 @@ class Config {
     /// Base API URL
     static var BaseAPIURL = "http://www.omdbapi.com/"
     /// API Key
-    static var ApiKey = ""
+    static var ApiKey = "&apikey=51738bb2"
     /// Read Config Function
     static func readConfig() {
         print("IMDB-Clone")
