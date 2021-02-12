@@ -9,6 +9,7 @@ target 'IMDBClone' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'MBProgressHUD', '1.1.0'
   pod 'IQKeyboardManagerSwift'
+  pod 'SkeletonView'
   # Pods for IMDBClone
 
 end
