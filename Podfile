@@ -8,6 +8,7 @@ target 'IMDBClone' do
   pod 'Kingfisher', '5.3.1'
   pod 'SnapKit', '~> 5.0.0'
   pod 'MBProgressHUD', '1.1.0'
+  pod 'IQKeyboardManagerSwift'
   # Pods for IMDBClone
 
 end
