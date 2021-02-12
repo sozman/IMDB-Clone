@@ -136,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="225" id="TfB-zo-1XU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchTableViewControllerItemCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableViewControllerItemCell" rowHeight="225" id="TfB-zo-1XU" customClass="SearchTableViewControllerItemCell" customModule="IMDBClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="225"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TfB-zo-1XU" id="guS-fr-I4L">
@@ -212,6 +212,14 @@
                                         <constraint firstItem="FWv-U7-swe" firstAttribute="leading" secondItem="H4m-VP-avH" secondAttribute="trailing" constant="8" symbolic="YES" id="yQg-nM-zUe"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="fAr-zl-9jy" id="HDj-RF-W2h"/>
+                                    <outlet property="nameLabel" destination="NbV-mF-xZi" id="mgl-cE-jVX"/>
+                                    <outlet property="posterImageView" destination="H4m-VP-avH" id="3QY-9t-Pb3"/>
+                                    <outlet property="rateBoxView" destination="emn-gh-Scm" id="jvk-BD-D0s"/>
+                                    <outlet property="rateLabel" destination="wdI-U6-Hkt" id="0Mc-Vi-S7R"/>
+                                    <outlet property="typeLabel" destination="FWv-U7-swe" id="VOW-x2-Mfg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
