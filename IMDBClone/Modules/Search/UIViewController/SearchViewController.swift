@@ -29,7 +29,12 @@ class SearchViewController: UIViewController {
         }
     }
     /// Search TextField
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchTextField: UITextField! {
+        didSet {
+            // Setup Delegate
+            searchTextField.delegate = self
+        }
+    }
     // MARK: - Local Variables
     /// Presenter Interactor Delegate
     var presenter: SearchPresenterInterface?
@@ -50,18 +55,10 @@ class SearchViewController: UIViewController {
     func setupUI() {}
 
     // MARK: - View Actions
-    @IBAction func testAction(_ sender: UIButton) {
-        openSearch()
-        
-    }
-
-    @IBAction func test2Action(_ sender: UIButton) {
-        closeSearch()
-    }
     
     // MARK: - Supported functions
     private func openSearch() {
-        UIView.animate(withDuration: 0.6) {
+        UIView.animate(withDuration: 0.3) {
             self.headerTitleLabel.alpha = 0
             self.searchBoxView.snp.remakeConstraints { (make) in
                 make.top.equalTo(self.headerBoxView.snp.top).offset(55)
@@ -70,10 +67,14 @@ class SearchViewController: UIViewController {
                 make.height.equalTo(140)
             }
             self.view.layoutIfNeeded()
+        } completion: { (status) in
+            if status {
+                self.addTableView()
+            }
         }
     }
     private func closeSearch() {
-        UIView.animate(withDuration: 0.6) {
+        UIView.animate(withDuration: 0.3) {
             self.headerBoxView.snp.remakeConstraints { (make) in
                 make.height.equalTo(260)
             }
@@ -82,11 +83,46 @@ class SearchViewController: UIViewController {
             }
             self.headerTitleLabel.alpha = 1
             self.view.layoutIfNeeded()
+        } completion: { (status) in
+            if status {
+                self.removeTableView()
+            }
         }
+    }
+    
+    
+    
+    private func addTableView() {
+        print("Table View Ekleyecegim")
+    }
+    
+    private func removeTableView() {
+        print("Table View Kaldiracagim")
     }
 }
 
 // MARK: - View Interface
 /// Only responsible for presenting data in a way decided
 extension SearchViewController: SearchViewInterface {
+}
+
+// MARK: - UITextfield Delegate
+extension SearchViewController: UITextFieldDelegate {
+    /// Tells the delegate when editing begins in the specified text field.
+    /// - Parameter textField: The text field in which an editing session began.
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        openSearch()
+    }
+    /// Tells the delegate when editing stops for the specified text field.
+    /// - Parameter textField: The text field for which editing ended.
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        closeSearch()
+    }
+    /// Asks the delegate whether to process the pressing of the Return button for the text field.
+    /// - Parameter textField: The text field whose return button was pressed.
+    /// - Returns: true if the text field should implement its default behavior for the return button; otherwise, false.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

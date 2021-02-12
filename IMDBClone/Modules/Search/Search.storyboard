@@ -101,44 +101,18 @@
                                 <color key="textColor" systemColor="systemGray3Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q24-TS-oPD">
-                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4LT-sQ-Dgr"/>
-                                    <constraint firstAttribute="width" constant="46" id="S63-sc-kF8"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xBY-qV-PA5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePE-wv-bhc">
-                                <rect key="frame" x="0.0" y="629" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IPC-ox-SKs"/>
-                                    <constraint firstAttribute="width" constant="46" id="zog-yc-vMt"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="test2Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1p-PL-FpL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MGg-Sp-emi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="023-zJ-iC7"/>
                             <constraint firstAttribute="trailing" secondItem="MGg-Sp-emi" secondAttribute="trailing" id="1NP-uh-Hi4"/>
                             <constraint firstItem="R8t-G8-mLn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Zt-yd-0IH"/>
-                            <constraint firstItem="ePE-wv-bhc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JYW-m0-6mN"/>
                             <constraint firstItem="R8t-G8-mLn" firstAttribute="top" secondItem="MGg-Sp-emi" secondAttribute="bottom" constant="70" id="URh-RW-mpz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q24-TS-oPD" secondAttribute="bottom" constant="20" id="hM6-xC-BCL"/>
                             <constraint firstItem="Ngd-Z7-b5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lgH-NZ-sZ9"/>
                             <constraint firstItem="gux-b0-jJN" firstAttribute="top" secondItem="R8t-G8-mLn" secondAttribute="bottom" constant="25" id="lzP-Eq-Xaq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ePE-wv-bhc" secondAttribute="bottom" constant="8" symbolic="YES" id="o4d-eW-g7q"/>
                             <constraint firstItem="Ngd-Z7-b5L" firstAttribute="top" secondItem="gux-b0-jJN" secondAttribute="bottom" constant="8" symbolic="YES" id="sVp-K0-7jw"/>
                             <constraint firstItem="MGg-Sp-emi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v3d-m9-ckN"/>
                             <constraint firstItem="gux-b0-jJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yoe-ql-07W"/>
-                            <constraint firstItem="q24-TS-oPD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8z-gR-kiV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jji-uH-Yqx"/>
@@ -153,10 +127,41 @@
             </objects>
             <point key="canvasLocation" x="799.20000000000005" y="99.400299850074973"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="8F5-UU-d9R">
+            <objects>
+                <tableViewController id="0Qr-d8-R0S" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N7i-8x-aue">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="147" id="TfB-zo-1XU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="147"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TfB-zo-1XU" id="guS-fr-I4L">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0Qr-d8-R0S" id="Xv5-GR-RfO"/>
+                            <outlet property="delegate" destination="0Qr-d8-R0S" id="HMl-OU-WRp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gR-az-VeZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1495.2" y="99.400299850074973"/>
+        </scene>
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="movie" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
