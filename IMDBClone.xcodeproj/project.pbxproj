@@ -22,6 +22,12 @@
 		6C66769225D5A66F000D66B0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66768C25D5A66F000D66B0 /* TestViewController.swift */; };
 		6C66769325D5A66F000D66B0 /* TestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66768D25D5A66F000D66B0 /* TestProtocols.swift */; };
 		6C66769425D5A66F000D66B0 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66768E25D5A66F000D66B0 /* TestInteractor.swift */; };
+		6C66769D25D683CA000D66B0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C66769725D683CA000D66B0 /* Search.storyboard */; };
+		6C66769E25D683CA000D66B0 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66769825D683CA000D66B0 /* SearchPresenter.swift */; };
+		6C66769F25D683CA000D66B0 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66769925D683CA000D66B0 /* SearchRouter.swift */; };
+		6C6676A025D683CA000D66B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66769A25D683CA000D66B0 /* SearchViewController.swift */; };
+		6C6676A125D683CA000D66B0 /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66769B25D683CA000D66B0 /* SearchProtocols.swift */; };
+		6C6676A225D683CA000D66B0 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C66769C25D683CA000D66B0 /* SearchInteractor.swift */; };
 		AFB2B931ED1696260031F009 /* Pods_IMDBClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A72BAE80A13B08835E814B5 /* Pods_IMDBClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +50,12 @@
 		6C66768C25D5A66F000D66B0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		6C66768D25D5A66F000D66B0 /* TestProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProtocols.swift; sourceTree = "<group>"; };
 		6C66768E25D5A66F000D66B0 /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
+		6C66769725D683CA000D66B0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		6C66769825D683CA000D66B0 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		6C66769925D683CA000D66B0 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		6C66769A25D683CA000D66B0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6C66769B25D683CA000D66B0 /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		6C66769C25D683CA000D66B0 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		9A72BAE80A13B08835E814B5 /* Pods_IMDBClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BE80629C2215FFCC94CE1 /* Pods-IMDBClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBClone.debug.xcconfig"; path = "Target Support Files/Pods-IMDBClone/Pods-IMDBClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +134,7 @@
 		6C66764025D5A56A000D66B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6C66769625D683B6000D66B0 /* Search */,
 				6C66768825D5A664000D66B0 /* Test */,
 			);
 			path = Modules;
@@ -187,6 +200,19 @@
 				6C66768E25D5A66F000D66B0 /* TestInteractor.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		6C66769625D683B6000D66B0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				6C66769725D683CA000D66B0 /* Search.storyboard */,
+				6C66769825D683CA000D66B0 /* SearchPresenter.swift */,
+				6C66769925D683CA000D66B0 /* SearchRouter.swift */,
+				6C66769A25D683CA000D66B0 /* SearchViewController.swift */,
+				6C66769B25D683CA000D66B0 /* SearchProtocols.swift */,
+				6C66769C25D683CA000D66B0 /* SearchInteractor.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		7015F714C75DD4D75A2B9F66 /* Frameworks */ = {
@@ -267,6 +293,7 @@
 			files = (
 				6C66768F25D5A66F000D66B0 /* Test.storyboard in Resources */,
 				6C66759225D5A1F3000D66B0 /* LaunchScreen.storyboard in Resources */,
+				6C66769D25D683CA000D66B0 /* Search.storyboard in Resources */,
 				6C66758F25D5A1F3000D66B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6676A225D683CA000D66B0 /* SearchInteractor.swift in Sources */,
+				6C6676A025D683CA000D66B0 /* SearchViewController.swift in Sources */,
 				6C66769225D5A66F000D66B0 /* TestViewController.swift in Sources */,
 				6C66767325D5A56A000D66B0 /* Config.swift in Sources */,
 				6C66766525D5A56A000D66B0 /* String.swift in Sources */,
@@ -329,6 +358,9 @@
 				6C66769325D5A66F000D66B0 /* TestProtocols.swift in Sources */,
 				6C66769125D5A66F000D66B0 /* TestRouter.swift in Sources */,
 				6C66767A25D5A56A000D66B0 /* json.swift in Sources */,
+				6C66769E25D683CA000D66B0 /* SearchPresenter.swift in Sources */,
+				6C6676A125D683CA000D66B0 /* SearchProtocols.swift in Sources */,
+				6C66769F25D683CA000D66B0 /* SearchRouter.swift in Sources */,
 				6C66769025D5A66F000D66B0 /* TestPresenter.swift in Sources */,
 				6C66769425D5A66F000D66B0 /* TestInteractor.swift in Sources */,
 				6C66767C25D5A56A000D66B0 /* Log.swift in Sources */,
