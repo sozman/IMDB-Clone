@@ -38,7 +38,8 @@ class SearchViewController: UIViewController {
     // MARK: - Local Variables
     /// Presenter Interactor Delegate
     var presenter: SearchPresenterInterface?
-
+    /// Table View Controller
+    var tableViewController: SearchTableViewController?
     // MARK: - View Did Load
     ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
@@ -52,7 +53,11 @@ class SearchViewController: UIViewController {
     func fetchData() {}
 
     // MARK: - Setup UI
-    func setupUI() {}
+    func setupUI() {
+//        tableViewController = mainstoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        tableViewController = SearchRouter.mainstoryboard.instantiateViewController(withIdentifier: "SearchTableViewController") as? SearchTableViewController
+        tableViewController?.presenter = self.presenter
+    }
 
     // MARK: - View Actions
     
@@ -85,7 +90,9 @@ class SearchViewController: UIViewController {
             self.view.layoutIfNeeded()
         } completion: { (status) in
             if status {
-                self.removeTableView()
+                if (self.presenter?.searchResponse?.first?.response == "False" || self.presenter?.searchResponse == nil) {
+                    self.removeTableView()
+                }
             }
         }
     }
@@ -93,11 +100,24 @@ class SearchViewController: UIViewController {
     
     
     private func addTableView() {
-        print("Table View Ekleyecegim")
+        // Adds the specified view controller as a child of the current view controller.
+        self.addChild(tableViewController!)
+        // Adds a view to the end of the receiver’s list of subviews.
+        self.view.addSubview((tableViewController?.view)!)
+        // Setup Constraint
+        tableViewController?.view.snp.makeConstraints({ (make) in
+            make.top.equalTo(self.headerBoxView.snp.bottom).offset(5)
+            make.left.right.equalTo(0)
+            make.bottom.equalTo(0)
+        })
+        // Called after the view controller is added or removed from a container view controller.
+        tableViewController?.didMove(toParent: self)
     }
     
     private func removeTableView() {
-        print("Table View Kaldiracagim")
+        tableViewController?.removeFromParent()
+        tableViewController?.view.removeFromSuperview()
+        self.presenter?.searchResponse?.removeAll()
     }
 }
 
@@ -107,10 +127,10 @@ extension SearchViewController: SearchViewInterface {
     /// Update View Trigger
     func updateView() {
         // Data Control
-        if let response = self.presenter?.searchResponse {
-            
+        if (self.presenter?.searchResponse) != nil {
+            tableViewController?.updateTableView()
         } else {
-            print("Sonuc bulunamadi")
+            removeTableView()
         }
     }
 }
@@ -125,6 +145,10 @@ extension SearchViewController: UITextFieldDelegate {
     /// Tells the delegate when editing stops for the specified text field.
     /// - Parameter textField: The text field for which editing ended.
     func textFieldDidEndEditing(_ textField: UITextField) {
+        /// Movie Name
+        let movieName = textField.text
+        // Get Search Result
+        self.presenter?.fetchSearch(movieName: movieName ?? "")
         closeSearch()
     }
     /// Asks the delegate whether to process the pressing of the Return button for the text field.

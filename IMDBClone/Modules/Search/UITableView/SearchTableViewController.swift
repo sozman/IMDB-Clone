@@ -39,7 +39,11 @@ extension SearchTableViewController {
     ///   - section: An index number identifying a section in tableView.
     /// - Returns: The number of rows in section.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.presenter?.searchResponse?.count ?? 0
+        if presenter?.searchResponse?.first?.response == "True" {
+            return self.presenter?.searchResponse?.count ?? 0
+        } else {
+            return 0
+        }
     }
     /// Asks the delegate for the height to use for a row in a specified location.
     /// - Parameters:

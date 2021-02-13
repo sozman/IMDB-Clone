@@ -72,7 +72,7 @@ class SearchTableViewControllerItemCell: UITableViewCell {
         self.posterImageView.kf.setImage(with: "\(model?.image ?? "")".url(), completionHandler:  { result in
             switch result {
             case .success:
-                self.posterImageView.stopSkeletonAnimation()
+                self.posterImageView.hideSkeleton()
             case .failure(let errorMessage):
                 print("Image Download Error: \(errorMessage.localizedDescription)")
             }
