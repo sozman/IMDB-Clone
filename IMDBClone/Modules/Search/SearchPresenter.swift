@@ -24,8 +24,9 @@ class SearchPresenter: SearchPresenterInterface {
         interactor?.getSearchResult(movieName: movieName)
     }
     /// Show Movie Detail Page
-    func showMovieDetail() {
-        router?.setupMovieDetail()
+    /// - Parameter movie: Movie Detail
+    func showMovieDetail(movie: SearchResponse) {
+        router?.setupMovieDetail(movie: movie)
     }
 }
 

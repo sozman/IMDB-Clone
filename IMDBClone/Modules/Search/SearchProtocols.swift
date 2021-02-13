@@ -23,7 +23,8 @@ protocol SearchPresenterInterface: class {
     /// - Parameter movieName: Movie Name
     func fetchSearch(movieName: String)
     /// Show Movie Detail Page
-    func showMovieDetail()
+    /// - Parameter movie: Movie Detail
+    func showMovieDetail(movie: SearchResponse)
 }
 // MARK: - View Interface
 /// Only responsible for presenting data in a way decided
@@ -42,7 +43,8 @@ protocol SearchRouterInterface: class {
     /// - returns: UIViewController
     static func createModule() -> UIViewController
     /// Setup And Pushing Movie Detail Page
-    func setupMovieDetail()
+    /// - Parameter movie: Movie Detail
+    func setupMovieDetail(movie: SearchResponse)
 }
 // MARK: - Interactor
 /// Responsible for making data calls

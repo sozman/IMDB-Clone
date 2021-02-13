@@ -16,6 +16,8 @@ class MovieDetailPresenter: MovieDetailPresenterInterface {
     var interactor: MovieDetailInteractorInterface?
     /// Handles navigation between screens
     var router: MovieDetailRouterInterface?
+    /// Movie
+    var movie: SearchResponse?
 }
 
 /// This delegate which do throw response when api request has complated

@@ -13,7 +13,8 @@ class MovieDetailRouter: MovieDetailRouterInterface {
     weak var viewController: UIViewController?
     /// Setup Modules classes and viewController
     /// - returns: UIViewController
-    static func createModule() -> UIViewController {
+    /// - Parameter movie: Movie Details
+    static func createModule(movie: SearchResponse?) -> UIViewController {
         /// Any representation of information on graphical interface
         let viewController = mainstoryboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as? MovieDetailViewController
         /// All presentation logic
@@ -26,6 +27,7 @@ class MovieDetailRouter: MovieDetailRouterInterface {
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
+        presenter.movie = movie
         interactor.presenter = presenter
 
         router.viewController = viewController

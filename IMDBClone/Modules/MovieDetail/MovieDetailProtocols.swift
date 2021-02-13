@@ -17,6 +17,8 @@ protocol MovieDetailPresenterInterface: class {
     var interactor: MovieDetailInteractorInterface? { get set }
     /// Handles navigation between screens
     var router: MovieDetailRouterInterface? { get set }
+    /// Movie
+    var movie: SearchResponse? { get set }
 }
 // MARK: - View Interface
 /// Only responsible for presenting data in a way decided
@@ -31,7 +33,8 @@ protocol MovieDetailRouterInterface: class {
     var viewController: UIViewController? { get set }
     /// Setup Modules classes and viewController
     /// - returns: UIViewController
-    static func createModule() -> UIViewController
+    /// - Parameter movie: Movie Details
+    static func createModule(movie: SearchResponse?) -> UIViewController
 }
 // MARK: - Interactor
 /// Responsible for making data calls
