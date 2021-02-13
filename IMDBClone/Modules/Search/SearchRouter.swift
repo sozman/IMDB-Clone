@@ -35,4 +35,11 @@ class SearchRouter: SearchRouterInterface {
     static var mainstoryboard: UIStoryboard {
         return UIStoryboard(name: "Search", bundle: Bundle.main)
     }
+    /// Setup And Pushing Movie Detail Page
+    func setupMovieDetail() {
+        /// Movie Detail Controller
+        let movieDetailController = MovieDetailRouter.createModule()
+        // Push Controller
+        self.viewController?.navigationController?.pushViewController(movieDetailController, animated: true)
+    }
 }

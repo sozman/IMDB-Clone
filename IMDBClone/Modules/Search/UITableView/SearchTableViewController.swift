@@ -59,6 +59,7 @@ extension SearchTableViewController {
     ///   - indexPath: An index path locating the new selected row in tableView.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        self.presenter?.showMovieDetail()
     }
 }
 

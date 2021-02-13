@@ -47,14 +47,27 @@ class SearchViewController: UIViewController {
         setupUI()
         fetchData()
     }
-
+    // MARK: - View Will Appear
+    /// Notifies the view controller that its view is about to be added to a view hierarchy.
+    /// - Parameter animated: animation
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    // MARK: - View Will Disappear
+    /// Notifies the view controller that its view is about to be removed from a view hierarchy.
+    /// - Parameter animated: animation
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
     // MARK: - Interactor
     /// Data flow function
     func fetchData() {}
 
     // MARK: - Setup UI
     func setupUI() {
-//        tableViewController = mainstoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
         tableViewController = SearchRouter.mainstoryboard.instantiateViewController(withIdentifier: "SearchTableViewController") as? SearchTableViewController
         tableViewController?.presenter = self.presenter
     }

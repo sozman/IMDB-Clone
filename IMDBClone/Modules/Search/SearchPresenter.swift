@@ -23,6 +23,10 @@ class SearchPresenter: SearchPresenterInterface {
     func fetchSearch(movieName: String) {
         interactor?.getSearchResult(movieName: movieName)
     }
+    /// Show Movie Detail Page
+    func showMovieDetail() {
+        router?.setupMovieDetail()
+    }
 }
 
 /// This delegate which do throw response when api request has complated
