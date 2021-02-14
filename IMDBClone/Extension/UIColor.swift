@@ -33,6 +33,10 @@ extension UIColor {
     static var bestColor: UIColor {
         return UIColor(red: 112.0/255, green: 198.0/255, blue: 52.0/255, alpha: 1.0)
     }
+    /// Navigation Bar Color
+    static var navigationColor: UIColor {
+        return UIColor(red: 112.0/255, green: 170.0/255, blue: 218.0/255, alpha: 1.0)
+    }
     /// Get Color for imdb persentage
     /// - Parameter percentage: IMDB Percentage
     /// - Returns: UIColor

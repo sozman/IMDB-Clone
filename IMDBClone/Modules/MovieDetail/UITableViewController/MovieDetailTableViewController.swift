@@ -78,11 +78,11 @@ extension MovieDetailTableViewController {
         case 4:
             return 221
         case 5:
-            return 60
+            return 50
         case 6:
-            return 60
+            return 50
         case 7:
-            return 60
+            return 50
         default:
             return 0
         }

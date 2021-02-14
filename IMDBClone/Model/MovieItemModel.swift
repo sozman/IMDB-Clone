@@ -32,8 +32,8 @@ struct MovieItemModel {
     ///   - description: Short Description of movie
     init(image: String?, rate: Double?, name: String?, type: String?, description: String?) {
         self.image = image
-        self.rate = Int(floor(rate ?? 0.0))
-        self.rateColor = UIColor.getColorOfPercentage(percentage: self.rate ?? 0)
+        self.rate = Int(floor(rate ?? 0.0)) 
+        self.rateColor = UIColor.getColorOfPercentage(percentage: (self.rate ?? 0) * 10)
         self.name = name
         self.type = type
         self.description = description

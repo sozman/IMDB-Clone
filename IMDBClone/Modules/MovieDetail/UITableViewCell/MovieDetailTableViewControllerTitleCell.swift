@@ -20,7 +20,7 @@ class MovieDetailTableViewControllerTitleCell: UITableViewCell {
             // Setup Boolean value that determines whether the image is highlighted.
             firstStarImageView.isHighlighted = false
             // Setup Tag
-            firstStarImageView.tag = 0
+            firstStarImageView.tag = 1
         }
     }
     /// Second Star Image View
@@ -29,7 +29,7 @@ class MovieDetailTableViewControllerTitleCell: UITableViewCell {
             // Setup Boolean value that determines whether the image is highlighted.
             secondStarImageView.isHighlighted = false
             // Setup Tag
-            secondStarImageView.tag = 1
+            secondStarImageView.tag = 2
         }
     }
     /// Third Star Image View
@@ -38,7 +38,7 @@ class MovieDetailTableViewControllerTitleCell: UITableViewCell {
             // Setup Boolean value that determines whether the image is highlighted.
             thirdStarImageView.isHighlighted = false
             // Setup Tag
-            thirdStarImageView.tag = 2
+            thirdStarImageView.tag = 3
         }
     }
     /// Fourth Star Image View
@@ -47,7 +47,7 @@ class MovieDetailTableViewControllerTitleCell: UITableViewCell {
             // Setup Boolean value that determines whether the image is highlighted.
             fourthStarImageView.isHighlighted = false
             // Setup Tag
-            fourthStarImageView.tag = 3
+            fourthStarImageView.tag = 4
         }
     }
     /// Fifth Star Image View
@@ -56,7 +56,7 @@ class MovieDetailTableViewControllerTitleCell: UITableViewCell {
             // Setup Boolean value that determines whether the image is highlighted.
             fifthStarImageView.isHighlighted = false
             // Setup Tag
-            fifthStarImageView.tag = 4
+            fifthStarImageView.tag = 5
         }
     }
     // MARK: - Local Variable
@@ -78,7 +78,7 @@ class MovieDetailTableViewControllerTitleCell: UITableViewCell {
         if let imdbRate = rate {
             /// Half Rate for 5 star
             let halfRate = imdbRate / 2
-            for i in 0...halfRate {
+            for i in 1...halfRate+1 {
                 /// Star Image View
                 guard let imageView = self.contentView.viewWithTag(i) as? UIImageView else { return }
                 imageView.isHighlighted = true
