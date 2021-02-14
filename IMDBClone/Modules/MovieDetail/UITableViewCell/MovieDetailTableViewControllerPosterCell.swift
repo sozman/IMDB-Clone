@@ -8,6 +8,7 @@
 import Foundation
 import Kingfisher
 import SkeletonView
+import UIKit
 
 // MARK: - UITable View Cell
 class MovieDetailTableViewControllerPosterCell: UITableViewCell {
@@ -37,13 +38,13 @@ class MovieDetailTableViewControllerPosterCell: UITableViewCell {
         // Show Loading Image Animation
         self.posterImageView.showAnimatedSkeleton()
         // Setup Image
-        self.posterImageView.kf.setImage(with: "\(poster)".url()) { result in
+        self.posterImageView.kf.setImage(with: "\(poster ?? "")".url(), completionHandler:  { result in
             switch result {
             case .success:
                 self.posterImageView.hideSkeleton()
             case .failure(let errorMessage):
                 print("Image Download Error: \(errorMessage.localizedDescription)")
             }
-        }
+        })
     }
 }
