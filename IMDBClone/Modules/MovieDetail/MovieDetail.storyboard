@@ -403,7 +403,7 @@
                                     <outlet property="studioLabel" destination="wI1-zr-6ce" id="JUk-60-qMJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="fR8-gv-qgP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MovieDetailTableViewControllerGenreCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewControllerGenreCell" rowHeight="60" id="fR8-gv-qgP" customClass="MovieDetailTableViewControllerGenreCell" customModule="IMDBClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="1075" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fR8-gv-qgP" id="A58-Uq-qVW">
@@ -436,6 +436,9 @@
                                         <constraint firstItem="c1h-md-0Jw" firstAttribute="leading" secondItem="Qhl-C8-rN2" secondAttribute="trailing" constant="8" symbolic="YES" id="u9J-zU-Inx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="genreLabel" destination="c1h-md-0Jw" id="gwO-gg-gs1"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Svt-uP-lVk">
                                 <rect key="frame" x="0.0" y="1135" width="375" height="60"/>
