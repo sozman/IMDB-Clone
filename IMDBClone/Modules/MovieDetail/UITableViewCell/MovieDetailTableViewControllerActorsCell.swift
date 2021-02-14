@@ -1,5 +1,5 @@
 //
-//  MovieDetailTableViewControllerWritersCell.swift
+//  MovieDetailTableViewControllerActorsCell.swift
 //  IMDBClone
 //
 //  Created by Sinan Özman on 14.02.2021.
@@ -9,19 +9,19 @@ import Foundation
 import UIKit
 
 // MARK: - UITable View Cell
-class MovieDetailTableViewControllerWritersCell: UITableViewCell {
+class MovieDetailTableViewControllerActorsCell: UITableViewCell {
     // MARK: - View Objects
-    /// Writers Collection view
-    @IBOutlet weak var writersCollectionView: UICollectionView! {
+    /// Actors Collection View
+    @IBOutlet weak var actorsCollectionView: UICollectionView! {
         didSet {
             // Collection View Setup
-            writersCollectionView.dataSource = self
-            writersCollectionView.delegate = self
+            actorsCollectionView.dataSource = self
+            actorsCollectionView.delegate = self
         }
     }
     // MARK: - Local Variable
-    /// Writers
-    var writers: [String]?
+    /// Actors
+    var actors: [String]?
     // MARK: - AwakeFromNib
     /// Decleration
     override func awakeFromNib() {
@@ -31,16 +31,16 @@ class MovieDetailTableViewControllerWritersCell: UITableViewCell {
     /// Setup User Interface
     func setupUI() {
         // Control Model
-        guard let _ = writers else {
-            print("Writers not found")
+        guard let _ = actors else {
+            print("Actors not found")
             return
         }
         // Update Collection View
-        self.writersCollectionView.reloadData()
+        self.actorsCollectionView.reloadData()
     }
 }
 // MARK: - Collection View Setup
-extension MovieDetailTableViewControllerWritersCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MovieDetailTableViewControllerActorsCell: UICollectionViewDelegate, UICollectionViewDataSource {
     /// Asks your data source object for the number of sections in the collection view.
     /// - Parameter collectionView: The collection view requesting this information.
     /// - Returns: The number of sections in collectionView.
@@ -53,7 +53,7 @@ extension MovieDetailTableViewControllerWritersCell: UICollectionViewDelegate, U
     ///   - section: An index number identifying a section in collectionView. This index value is 0-based.
     /// - Returns: The number of rows in section.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return writers?.count ?? 0
+        return actors?.count ?? 0
     }
     /// Asks your data source object for the cell that corresponds to the specified item in the collection view.
     /// - Parameters:
@@ -65,11 +65,11 @@ extension MovieDetailTableViewControllerWritersCell: UICollectionViewDelegate, U
             cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         // Create Cell With Nib
-        /// Writer Collection View Controller Cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieDetailWriterCollectionViewCell.CellIdentifier, for: indexPath) as! MovieDetailWriterCollectionViewCell
+        /// Actor Collection View Controller Cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieDetailActorCollectionViewCell.CellIdentifier, for: indexPath) as! MovieDetailActorCollectionViewCell
         // Configure Cell
-        /// Index writer
-        let data = self.writers?[indexPath.row]
+        /// Index actor
+        let data = self.actors?[indexPath.row]
         // Setup cell
         cell.setupUI(data)
         // Return final cell
