@@ -143,7 +143,9 @@ extension SearchViewController: SearchViewInterface {
         if (self.presenter?.searchResponse) != nil {
             tableViewController?.updateTableView()
         } else {
-            removeTableView()
+            if self.presenter?.searchResponse?.first?.response != "True" {
+                removeTableView()
+            }
         }
     }
 }
