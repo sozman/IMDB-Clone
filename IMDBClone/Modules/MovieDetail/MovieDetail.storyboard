@@ -154,6 +154,31 @@
                                     <outlet property="thirdStarImageView" destination="MRL-jA-i3o" id="62H-xK-bz0"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MovieDetailTableViewControllerDescriptionCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewControllerDescriptionCell" rowHeight="114" id="GFH-7g-QC4" customClass="MovieDetailTableViewControllerDescriptionCell" customModule="IMDBClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="459" width="375" height="114"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GFH-7g-QC4" id="2rK-p8-a0c">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="999" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fy2-ON-Hq7">
+                                            <rect key="frame" x="21" y="16" width="333" height="82"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fy2-ON-Hq7" secondAttribute="trailing" constant="5" id="F1L-KS-Tvz"/>
+                                        <constraint firstItem="fy2-ON-Hq7" firstAttribute="top" secondItem="2rK-p8-a0c" secondAttribute="topMargin" constant="5" id="dmy-VM-h1z"/>
+                                        <constraint firstItem="fy2-ON-Hq7" firstAttribute="leading" secondItem="2rK-p8-a0c" secondAttribute="leadingMargin" constant="5" id="i8i-WC-kcm"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fy2-ON-Hq7" secondAttribute="bottom" constant="5" id="lxr-az-e0Y"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="fy2-ON-Hq7" id="xGE-0r-4ZS"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="S7x-7W-xkZ" id="fm5-rf-o5G"/>
