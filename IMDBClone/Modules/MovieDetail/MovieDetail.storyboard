@@ -4,7 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="White"/>
                         <constraints>
                             <constraint firstItem="FBy-4D-MwB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9Kt-am-Ct0"/>
                             <constraint firstItem="FBy-4D-MwB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lwq-P5-72K"/>
@@ -49,7 +49,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MKl-9h-ctf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="White"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MovieDetailTableViewControllerPosterCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewControllerPosterCell" rowHeight="317" id="1zJ-9Q-S7h" customClass="MovieDetailTableViewControllerPosterCell" customModule="IMDBClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="317"/>
@@ -69,6 +69,7 @@
                                         <constraint firstAttribute="bottom" secondItem="Wq3-du-daU" secondAttribute="bottom" constant="10" id="zph-Ib-0qt"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="posterImageView" destination="Wq3-du-daU" id="TXA-On-R7g"/>
                                 </connections>
@@ -142,6 +143,7 @@
                                         <constraint firstItem="PYx-CR-ZKg" firstAttribute="leading" secondItem="2NJ-pj-fqp" secondAttribute="leadingMargin" id="wW1-n2-jAt"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="fifthStarImageView" destination="Ad1-gw-lQf" id="vJK-Z5-6xv"/>
                                     <outlet property="firstStarImageView" destination="X4S-JU-8WC" id="eM4-fN-ija"/>
@@ -172,6 +174,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="fy2-ON-Hq7" secondAttribute="bottom" constant="5" id="lxr-az-e0Y"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="fy2-ON-Hq7" id="xGE-0r-4ZS"/>
                                 </connections>
@@ -194,7 +197,7 @@
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6JG-bq-lzT">
                                             <rect key="frame" x="16" y="43" width="343" height="167"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" name="White"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qGZ-nB-QPp">
                                                 <size key="itemSize" width="134" height="150"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -226,7 +229,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" name="White"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="0LU-Y2-jxz"/>
                                                                     <constraint firstAttribute="trailing" secondItem="XHb-Xw-798" secondAttribute="trailing" constant="5" id="Npp-6I-IcN"/>
@@ -246,6 +249,7 @@
                                                             <constraint firstItem="kUT-3R-UJA" firstAttribute="top" secondItem="sHT-in-shj" secondAttribute="top" id="no2-y4-E4i"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
+                                                    <color key="backgroundColor" name="White"/>
                                                     <size key="customSize" width="100" height="130"/>
                                                     <connections>
                                                         <outlet property="nameLabel" destination="XHb-Xw-798" id="fxk-PF-Yy4"/>
@@ -265,6 +269,7 @@
                                         <constraint firstItem="6JG-bq-lzT" firstAttribute="leading" secondItem="a6t-9n-R7D" secondAttribute="leadingMargin" id="xIX-pF-CbU"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="writersCollectionView" destination="6JG-bq-lzT" id="poX-w2-9LP"/>
                                 </connections>
@@ -287,7 +292,7 @@
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tBZ-on-NbI">
                                             <rect key="frame" x="16" y="43" width="343" height="167"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" name="White"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2g9-5p-hzh">
                                                 <size key="itemSize" width="134" height="150"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -319,7 +324,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" name="White"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="y4E-Kd-WBZ" secondAttribute="bottom" constant="5" id="1jK-mQ-fU5"/>
                                                                     <constraint firstAttribute="trailing" secondItem="y4E-Kd-WBZ" secondAttribute="trailing" constant="5" id="2FE-UL-uam"/>
@@ -339,6 +344,7 @@
                                                             <constraint firstAttribute="bottom" secondItem="yoY-ij-lzs" secondAttribute="bottom" id="aU6-SB-FPv"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
+                                                    <color key="backgroundColor" name="White"/>
                                                     <size key="customSize" width="100" height="130"/>
                                                     <connections>
                                                         <outlet property="actorImageView" destination="GR9-2L-0cd" id="A5N-Bn-Rh0"/>
@@ -358,6 +364,7 @@
                                         <constraint firstItem="tBZ-on-NbI" firstAttribute="trailing" secondItem="XHT-JK-VgJ" secondAttribute="trailingMargin" id="nrN-eg-4pS"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="actorsCollectionView" destination="tBZ-on-NbI" id="he5-FH-ei0"/>
                                 </connections>
@@ -395,6 +402,7 @@
                                         <constraint firstItem="5yZ-cm-ka1" firstAttribute="leading" secondItem="xFq-9S-kR4" secondAttribute="leadingMargin" id="kuE-bh-cbT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="studioLabel" destination="wI1-zr-6ce" id="JUk-60-qMJ"/>
                                 </connections>
@@ -432,6 +440,7 @@
                                         <constraint firstItem="c1h-md-0Jw" firstAttribute="leading" secondItem="Qhl-C8-rN2" secondAttribute="trailing" constant="8" symbolic="YES" id="u9J-zU-Inx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="genreLabel" destination="c1h-md-0Jw" id="gwO-gg-gs1"/>
                                 </connections>
@@ -469,6 +478,7 @@
                                         <constraint firstItem="Wr7-kT-xRB" firstAttribute="leading" secondItem="IUQ-Qw-gzG" secondAttribute="trailing" constant="8" symbolic="YES" id="sw8-nh-yv4"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="White"/>
                                 <connections>
                                     <outlet property="releaseLabel" destination="Wr7-kT-xRB" id="PNP-oL-FvL"/>
                                 </connections>
@@ -489,8 +499,8 @@
         <image name="empty_profile_photo" width="1280" height="1280"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
