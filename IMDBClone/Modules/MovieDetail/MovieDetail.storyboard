@@ -440,7 +440,7 @@
                                     <outlet property="genreLabel" destination="c1h-md-0Jw" id="gwO-gg-gs1"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Svt-uP-lVk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MovieDetailTableViewControllerReleaseCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewControllerReleaseCell" rowHeight="60" id="Svt-uP-lVk" customClass="MovieDetailTableViewControllerReleaseCell" customModule="IMDBClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="1135" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Svt-uP-lVk" id="kM9-MH-OvA">
@@ -473,6 +473,9 @@
                                         <constraint firstItem="Wr7-kT-xRB" firstAttribute="leading" secondItem="IUQ-Qw-gzG" secondAttribute="trailing" constant="8" symbolic="YES" id="sw8-nh-yv4"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="releaseLabel" destination="Wr7-kT-xRB" id="PNP-oL-FvL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

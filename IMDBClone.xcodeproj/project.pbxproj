@@ -50,6 +50,7 @@
 		6CB8F4DB25D968000080984E /* MovieDetailTableViewControllerActorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8F4DA25D968000080984E /* MovieDetailTableViewControllerActorsCell.swift */; };
 		6CB8F4DE25D9734E0080984E /* MovieDetailTableViewControllerStudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8F4DD25D9734E0080984E /* MovieDetailTableViewControllerStudioCell.swift */; };
 		6CB8F4E125D973E00080984E /* MovieDetailTableViewControllerGenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8F4E025D973E00080984E /* MovieDetailTableViewControllerGenreCell.swift */; };
+		6CB8F4E425D975680080984E /* MovieDetailTableViewControllerReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8F4E325D975680080984E /* MovieDetailTableViewControllerReleaseCell.swift */; };
 		AFB2B931ED1696260031F009 /* Pods_IMDBClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A72BAE80A13B08835E814B5 /* Pods_IMDBClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		6CB8F4DA25D968000080984E /* MovieDetailTableViewControllerActorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewControllerActorsCell.swift; sourceTree = "<group>"; };
 		6CB8F4DD25D9734E0080984E /* MovieDetailTableViewControllerStudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewControllerStudioCell.swift; sourceTree = "<group>"; };
 		6CB8F4E025D973E00080984E /* MovieDetailTableViewControllerGenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewControllerGenreCell.swift; sourceTree = "<group>"; };
+		6CB8F4E325D975680080984E /* MovieDetailTableViewControllerReleaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewControllerReleaseCell.swift; sourceTree = "<group>"; };
 		9A72BAE80A13B08835E814B5 /* Pods_IMDBClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BE80629C2215FFCC94CE1 /* Pods-IMDBClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBClone.debug.xcconfig"; path = "Target Support Files/Pods-IMDBClone/Pods-IMDBClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -332,6 +334,7 @@
 				6CB8F4DA25D968000080984E /* MovieDetailTableViewControllerActorsCell.swift */,
 				6CB8F4DD25D9734E0080984E /* MovieDetailTableViewControllerStudioCell.swift */,
 				6CB8F4E025D973E00080984E /* MovieDetailTableViewControllerGenreCell.swift */,
+				6CB8F4E325D975680080984E /* MovieDetailTableViewControllerReleaseCell.swift */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				6CB8F3B825D6AD0E0080984E /* MovieItemModel.swift in Sources */,
 				6C66769025D5A66F000D66B0 /* TestPresenter.swift in Sources */,
 				6C66769425D5A66F000D66B0 /* TestInteractor.swift in Sources */,
+				6CB8F4E425D975680080984E /* MovieDetailTableViewControllerReleaseCell.swift in Sources */,
 				6CB8F4D125D962130080984E /* MovieDetailTableViewControllerWritersCell.swift in Sources */,
 				6C6676A525D6898C000D66B0 /* UIView.swift in Sources */,
 				6CB8F4BE25D802C40080984E /* MovieDetailViewController.swift in Sources */,
