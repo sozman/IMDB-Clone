@@ -21,6 +21,8 @@ class SearchPresenter: SearchPresenterInterface {
     /// Fetch Search
     /// - Parameter movieName: Movie Name
     func fetchSearch(movieName: String) {
+        self.searchResponse?.removeAll()
+        view?.showLoading()
         interactor?.getSearchResult(movieName: movieName)
     }
     /// Show Movie Detail Page
@@ -35,6 +37,7 @@ extension SearchPresenter: SearchInteractorDelegate {
     /// Fetch Search
     /// - Parameter response: Parsed JSON File via Search Response Model
     func fetchSearch(response: SearchResponse?) {
+        view?.hideLoading()
         // Control Response
         if let data = response {
             /// Dummy Array

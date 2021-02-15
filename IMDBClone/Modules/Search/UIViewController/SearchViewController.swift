@@ -101,18 +101,13 @@ class SearchViewController: UIViewController {
             }
             self.headerTitleLabel.alpha = 1
             self.view.layoutIfNeeded()
-        } completion: { (status) in
-            if status {
-                if (self.presenter?.searchResponse?.first?.response == "False" || self.presenter?.searchResponse == nil) {
-                    self.removeTableView()
-                }
-            }
         }
     }
     
     
     
     private func addTableView() {
+        tableViewController?.updateTableView()
         // Adds the specified view controller as a child of the current view controller.
         self.addChild(tableViewController!)
         // Adds a view to the end of the receiver’s list of subviews.
@@ -140,13 +135,19 @@ extension SearchViewController: SearchViewInterface {
     /// Update View Trigger
     func updateView() {
         // Data Control
-        if (self.presenter?.searchResponse) != nil {
+        if (self.presenter?.searchResponse) != nil && self.presenter?.searchResponse?.first?.response ?? "False" == "True" {
             tableViewController?.updateTableView()
         } else {
-            if self.presenter?.searchResponse?.first?.response != "True" {
-                removeTableView()
-            }
+            removeTableView()
         }
+    }
+    /// Show Loading
+    func showLoading() {
+        self.showLoadingDialog()
+    }
+    /// Hide Loading
+    func hideLoading() {
+        self.dismissLoadingDialog()
     }
 }
 

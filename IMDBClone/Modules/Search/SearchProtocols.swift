@@ -33,6 +33,10 @@ protocol SearchViewInterface: class {
     var presenter: SearchPresenterInterface? { get set }
     /// Update View Trigger
     func updateView()
+    /// Show Loading
+    func showLoading()
+    /// Hide Loading
+    func hideLoading()
 }
 // MARK: - Router Interface
 /// Listens from the about which screen to present and executes that.
